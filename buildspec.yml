@@ -17,10 +17,10 @@ phases:
       - echo "Running Terraform Plan"
       - terraform plan -out=tfplan
 
-  # post_build:
-  #   commands:
-  #     - echo "Applying Terraform Configuration"
-  #     - terraform apply --auto-approve tfplan
+  post_build:
+    commands:
+      - echo "Applying Terraform Configuration"
+      - terraform apply --auto-approve tfplan
 
 artifacts:
   files:
