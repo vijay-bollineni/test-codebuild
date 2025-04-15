@@ -14,11 +14,5 @@ phases:
 
   build:
     commands:
-      - echo "Running Terraform Plan"
-      - terraform plan -out=tfplan
-
-
-artifacts:
-  files:
-    - terraform.tfstate
-    - terraform.tfstate.backup
+      - echo "Running Terraform Apply"
+      - terraform apply --auto-approve tfplan
